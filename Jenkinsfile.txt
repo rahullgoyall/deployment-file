@@ -1,0 +1,22 @@
+pipeline{
+    
+    agent any
+    stages{
+        
+        stage("git checkout"){
+            steps{
+                git branch: env.BRANCH, credentialsId: 'git cred', url: 'https://github.com/rahullgoyall/TestNg-Automation-framework.git'
+            }
+            
+        }
+        
+        stage("Build"){
+            steps{
+                
+                echo "sss"
+            }
+            
+        }
+    }
+    
+}
